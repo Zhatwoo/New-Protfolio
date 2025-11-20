@@ -107,7 +107,6 @@ export default function AboutMe() {
 
       {/* Tech Stack (shared component) */}
       <TechStack />
-
       {/* Soft Skills (placed below TechStack) */}
       <section className="py-12 bg-white">
         <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
