@@ -26,14 +26,14 @@ export default function Hero() {
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-center text-black mb-6 leading-tight tracking-tight">
           Hello, I'm{' '}
           <span className="bg-gradient-to-r from-black via-gray-800 to-gray-600 bg-clip-text text-transparent">
-            [Your Name]
+            Neo Dela Torre
           </span>
         </h1>
 
         {/* Subheading */}
         <p className="text-lg sm:text-xl text-gray-600 text-center max-w-2xl mx-auto mb-8 leading-relaxed">
-          A passionate full-stack developer crafting beautiful, functional digital experiences. 
-          Specializing in modern web technologies and user-centered design.
+        I'm a Computer Engineer Graduate with 1 year of experience building useful and functional digital and hardware projects. 
+        Creating solutions that make a difference and working with teams that share the same passion for excellence.
         </p>
 
         {/* CTA Buttons */}
@@ -46,7 +46,7 @@ export default function Hero() {
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Link>
           <Link
-            href="#contact"
+            href="/Contacts"
             className="inline-flex items-center gap-2 px-8 py-4 border-2 border-gray-300 text-black font-semibold rounded-lg hover:border-black hover:bg-gray-50 transition-colors duration-300"
           >
             Get In Touch
@@ -56,15 +56,15 @@ export default function Hero() {
         {/* Stats section */}
         <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto pt-12 border-t border-gray-200">
           <div className="text-center">
-            <div className="text-3xl sm:text-4xl font-bold text-black mb-2">50+</div>
+            <div className="text-3xl sm:text-4xl font-bold text-black mb-2">5</div>
             <p className="text-sm text-gray-600">Projects Completed</p>
           </div>
           <div className="text-center">
-            <div className="text-3xl sm:text-4xl font-bold text-black mb-2">30+</div>
+            <div className="text-3xl sm:text-4xl font-bold text-black mb-2">4</div>
             <p className="text-sm text-gray-600">Happy Clients</p>
           </div>
           <div className="text-center">
-            <div className="text-3xl sm:text-4xl font-bold text-black mb-2">5+</div>
+            <div className="text-3xl sm:text-4xl font-bold text-black mb-2">1</div>
             <p className="text-sm text-gray-600">Years Experience</p>
           </div>
         </div>

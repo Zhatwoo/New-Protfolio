@@ -8,7 +8,12 @@ export default function MyJourney() {
         
         <div className="space-y-8">
           <p className="text-lg text-gray-600 leading-relaxed">
-            This section will showcase your professional journey and milestones.
+          I graduated with a degree in Computer Engineering, and at first, my hardware skills were stronger than my software skills. 
+          I was worried about applying for jobs and entering the world of coding because I thought I wouldn’t be able to keep up. 
+          But when I got accepted into a small company, I learned new frameworks that became my tools in the programming world.
+
+          My background as a Computer Engineer with knowledge in both hardware and software also became an advantage. 
+          It opened more opportunities for me and increased my value as both a Computer Engineer and a Software Developer.
           </p>
         </div>
       </div>
