@@ -18,6 +18,8 @@ import {
 } from 'react-icons/si';
 import TechStack from '../Homepage/Components/Techstack';
 import MyJourney from './Components/MyJourney';
+import Education from './Components/Education';
+import Experience from './Components/Experience';
 
 export default function AboutMe() {
   const skills = {
@@ -43,47 +45,7 @@ export default function AboutMe() {
     ],
   };
 
-  const experience = [
-    {
-      title: 'Senior Full-Stack Developer',
-      company: 'Tech Company',
-      period: '2022 - Present',
-      description: 'Leading development of scalable web applications and mentoring junior developers.',
-    },
-    {
-      title: 'Full-Stack Developer',
-      company: 'Digital Agency',
-      period: '2020 - 2022',
-      description: 'Developed and maintained multiple client projects using modern tech stack.',
-    },
-    {
-      title: 'Frontend Developer',
-      company: 'Freelance',
-      period: '2018 - 2020',
-      description: 'Created responsive websites and web applications for various clients.',
-    },
-  ];
 
-  const education = [
-    {
-      degree: 'Bachelor of Science in Computer Science',
-      institution: 'State University',
-      period: '2014 - 2018',
-      description: 'Focused on software engineering and web development.',
-    },
-    {
-      degree: 'Full Stack Web Development Bootcamp',
-      institution: 'Tech Academy',
-      period: '2018',
-      description: 'Intensive 3-month program covering modern web technologies.',
-    },
-    {
-      degree: 'Advanced React & Next.js Course',
-      institution: 'Online Learning Platform',
-      period: '2021',
-      description: 'Specialized training in modern JavaScript frameworks and best practices.',
-    },
-  ];
 
   const softSkills = [
     'Problem-solving',
@@ -118,7 +80,7 @@ export default function AboutMe() {
               </p>
 
               <Link
-                href="#contact"
+                href="/Contacts"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-black text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors duration-300 group"
               >
                 Let's Connect
@@ -130,7 +92,7 @@ export default function AboutMe() {
             <div className="flex justify-center">
               <div className="relative w-[320px] h-[480px] sm:w-[400px] sm:h-[600px] rounded-2xl overflow-hidden border-2 border-gray-200">
                 <img
-                  src="Gemini_Generated_Image_y3w2owy3w2owy3w2.png"
+                  src="Gemini_Generated_Image_8mumwp8mumwp8mum.png"
                   alt="Profile"
                   className="w-full h-full object-cover"
                   style={{ objectPosition: '50% 60%' }}
@@ -145,7 +107,6 @@ export default function AboutMe() {
 
       {/* Tech Stack (shared component) */}
       <TechStack />
-
       {/* Soft Skills (placed below TechStack) */}
       <section className="py-12 bg-white">
         <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
@@ -170,59 +131,9 @@ export default function AboutMe() {
         </div>
       </section>
 
-      {/* Experience Section */}
-      <section className="py-20 sm:py-32 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
-          <h2 className="text-4xl sm:text-5xl font-bold text-black mb-16">Experience</h2>
+      <Experience />
 
-          <div className="space-y-8">
-            {experience.map((job, index) => (
-              <div
-                key={index}
-                className="bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow"
-              >
-                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4">
-                  <div>
-                    <h3 className="text-2xl font-bold text-black">{job.title}</h3>
-                    <p className="text-lg text-gray-600 mt-1">{job.company}</p>
-                  </div>
-                  <span className="text-sm font-semibold text-gray-500 mt-2 sm:mt-0">
-                    {job.period}
-                  </span>
-                </div>
-                <p className="text-gray-600">{job.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Education Section */}
-      <section className="py-20 sm:py-32 bg-white">
-        <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
-          <h2 className="text-4xl sm:text-5xl font-bold text-black mb-16">Education</h2>
-
-          <div className="space-y-8">
-            {education.map((edu, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 p-8 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow"
-              >
-                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4">
-                  <div>
-                    <h3 className="text-2xl font-bold text-black">{edu.degree}</h3>
-                    <p className="text-lg text-gray-600 mt-1">{edu.institution}</p>
-                  </div>
-                  <span className="text-sm font-semibold text-gray-500 mt-2 sm:mt-0">
-                    {edu.period}
-                  </span>
-                </div>
-                <p className="text-gray-600">{edu.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Education />
 
       {/* CTA Section */}
       <section className="py-20 sm:py-32 bg-black text-white">
@@ -235,7 +146,7 @@ export default function AboutMe() {
             Feel free to get in touch with me!
           </p>
           <Link
-            href="#contact"
+            href="/Contacts"
             className="inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-semibold rounded-lg hover:bg-gray-200 transition-colors duration-300 group"
           >
             Get In Touch

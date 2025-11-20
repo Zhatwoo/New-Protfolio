@@ -11,7 +11,6 @@ export default function Header() {
     { name: 'Home', href: '/' },
     { name: 'About Me', href: '/AboutMe' },
     { name: 'Projects', href: '/Projects' },
-    { name: 'Skills', href: '/Skills' },
     { name: 'Contact', href: '/Contacts' },
     { name: 'Resume', href: '/Resume' },
   ];
@@ -39,16 +38,6 @@ export default function Header() {
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
             </Link>
           ))}
-        </div>
-
-        {/* CTA Button */}
-        <div className="hidden md:block">
-          <Link
-            href="/Contacts"
-            className="px-6 py-2 bg-black text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors duration-300"
-          >
-            Get In Touch
-          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -79,13 +68,6 @@ export default function Header() {
                 {link.name}
               </Link>
             ))}
-            <Link
-              href="/Contacts"
-              className="block w-full px-6 py-2 bg-black text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors text-center mt-4"
-              onClick={() => setIsOpen(false)}
-            >
-              Get In Touch
-            </Link>
           </div>
         </div>
       )}
