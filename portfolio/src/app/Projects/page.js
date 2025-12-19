@@ -1,98 +1,48 @@
 'use client';
 
 import Link from 'next/link';
-import { ExternalLink, Github, FileText } from 'lucide-react';
+import { ExternalLink, Github } from 'lucide-react';
 
 const projects = [
   {
     id: 1,
-    title: 'E-Commerce Platform',
-    description: 'A full-stack e-commerce solution with real-time inventory management, payment integration, and comprehensive admin dashboard. Features include user authentication, shopping cart, order tracking, and analytics.',
-    image: 'https://images.unsplash.com/photo-1460925895917-adf4e565db18?w=800&h=500&fit=crop',
-    tags: ['Next.js', 'Node.js', 'Firebase', 'Stripe', 'MongoDB'],
-    liveDemo: 'https://example.com',
-    github: 'https://github.com/example/ecommerce',
-    caseStudy: '/projects/ecommerce-case-study',
+    title: 'Loopwork',
+    description: 'A modern, all-in-one collaboration platform designed to streamline daily office operations. Features include project management, scheduling, time tracking, document management, and 14+ integrated tools for enhanced productivity and team collaboration.',
+    image: '/loopwork.png',
+    tags: ['Next.js', 'React', 'Node.js', 'Tailwind CSS', 'Full-Stack'],
+    liveDemo: 'https://loopwork-seven.vercel.app/',
+    github: 'https://github.com/Zhatwoo/Project-Management.git',
+    caseStudy: '/projects/loopwork-case-study',
   },
   {
     id: 2,
-    title: 'Task Management App',
-    description: 'A collaborative task management application with real-time updates, team collaboration features, and analytics dashboard. Built with modern technologies for seamless user experience.',
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=500&fit=crop',
-    tags: ['React', 'Firebase', 'Tailwind CSS', 'Redux', 'Node.js'],
-    liveDemo: 'https://example.com',
-    github: 'https://github.com/example/taskmanager',
-    caseStudy: '/projects/taskmanager-case-study',
+    title: 'TJournal',
+    description: 'An advanced trading journal platform that helps traders track performance, identify patterns, and transform their trading strategy through data-driven insights. Features include trade analytics, visual documentation, performance tracking, and multi-market support.',
+    image: '/tjournal-hero.png',
+    tags: ['Next.js', 'React', 'Analytics', 'Trading', 'Data Visualization'],
+    liveDemo: 'https://tjournal-chi.vercel.app/',
+    github: '#',
+    caseStudy: '/projects/tjournal-case-study',
   },
   {
     id: 3,
-    title: 'Analytics Dashboard',
-    description: 'Data visualization and analytics platform with interactive charts, real-time metrics, and customizable reports. Perfect for businesses to track their performance and make data-driven decisions.',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop',
-    tags: ['Next.js', 'Chart.js', 'Node.js', 'PostgreSQL', 'TypeScript'],
-    liveDemo: 'https://example.com',
-    github: 'https://github.com/example/analytics',
-    caseStudy: '/projects/analytics-case-study',
+    title: 'POSystem',
+    description: 'A company login and management system designed for businesses to manage their operations efficiently. Features secure company-based authentication, user management, and streamlined access control for organizational workflows.',
+    image: '/posystem-hero.png',
+    tags: ['Next.js', 'Authentication', 'Company Management', 'Security', 'Full-Stack'],
+    liveDemo: 'https://posystem-seven.vercel.app/',
+    github: '#',
+    caseStudy: '/projects/posystem-case-study',
   },
   {
     id: 4,
-    title: 'Social Media Dashboard',
-    description: 'A comprehensive social media management platform that allows users to schedule posts, analyze engagement, and manage multiple social accounts from one place.',
-    image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=500&fit=crop',
-    tags: ['React', 'Node.js', 'MongoDB', 'Express', 'REST API'],
-    liveDemo: 'https://example.com',
-    github: 'https://github.com/example/social-dashboard',
-    caseStudy: '/projects/social-dashboard-case-study',
-  },
-  {
-    id: 5,
-    title: 'Weather Forecast App',
-    description: 'A beautiful weather application with location-based forecasts, interactive maps, and detailed weather analytics. Features include 7-day forecasts, hourly updates, and weather alerts.',
-    image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&h=500&fit=crop',
-    tags: ['Next.js', 'OpenWeather API', 'Tailwind CSS', 'TypeScript'],
-    liveDemo: 'https://example.com',
-    github: 'https://github.com/example/weather-app',
-    caseStudy: '/projects/weather-app-case-study',
-  },
-  {
-    id: 6,
-    title: 'Blog Platform',
-    description: 'A modern blogging platform with rich text editor, comment system, user authentication, and SEO optimization. Built for content creators who want a beautiful and functional blog.',
-    image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=500&fit=crop',
-    tags: ['Next.js', 'Sanity CMS', 'Tailwind CSS', 'Vercel'],
-    liveDemo: 'https://example.com',
-    github: 'https://github.com/example/blog-platform',
-    caseStudy: '/projects/blog-platform-case-study',
-  },
-  {
-    id: 7,
-    title: 'Real Estate Listing Platform',
-    description: 'A full-featured real estate platform with property listings, advanced search filters, virtual tours, and agent management system. Perfect for real estate agencies.',
-    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop',
-    tags: ['React', 'Node.js', 'PostgreSQL', 'Mapbox', 'Firebase'],
-    liveDemo: 'https://example.com',
-    github: 'https://github.com/example/realestate',
-    caseStudy: '/projects/realestate-case-study',
-  },
-  {
-    id: 8,
-    title: 'Fitness Tracking App',
-    description: 'A comprehensive fitness tracking application with workout plans, progress tracking, nutrition logging, and social features. Helps users achieve their fitness goals.',
-    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=500&fit=crop',
-    tags: ['React Native', 'Firebase', 'Node.js', 'MongoDB', 'Chart.js'],
-    liveDemo: 'https://example.com',
-    github: 'https://github.com/example/fitness-app',
-    caseStudy: '/projects/fitness-app-case-study',
-  },
-  {
-    id: 9,
-    title: 'Learning Management System',
-    description: 'An educational platform for online courses with video streaming, quizzes, assignments, and progress tracking. Designed for both students and instructors.',
-    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=500&fit=crop',
-    tags: ['Next.js', 'Node.js', 'PostgreSQL', 'AWS S3', 'Stripe'],
-    liveDemo: 'https://example.com',
-    github: 'https://github.com/example/lms',
-    caseStudy: '/projects/lms-case-study',
+    title: 'Project Management',
+    description: 'A comprehensive project management application built with modern web technologies. Features include task management, team collaboration, project tracking, and real-time updates for efficient workflow management.',
+    image: '/pm.png',
+    tags: ['Next.js', 'React', 'Node.js', 'Project Management', 'Full-Stack'],
+    liveDemo: '#',
+    github: 'https://github.com/Zhatwoo/Project-Management.git',
+    caseStudy: '#',
   },
 ];
 
@@ -161,33 +111,29 @@ export default function Projects() {
 
                   {/* Action Buttons */}
                   <div className="flex flex-wrap gap-3">
-                    <Link
-                      href={project.liveDemo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-black text-white text-sm font-semibold rounded-lg hover:bg-gray-800 transition-colors duration-300 group/btn"
-                    >
-                      <ExternalLink className="w-4 h-4 group-hover/btn:translate-x-0.5 transition-transform" />
-                      Live Demo
-                    </Link>
+                    {project.liveDemo !== '#' && (
+                      <Link
+                        href={project.liveDemo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-black text-white text-sm font-semibold rounded-lg hover:bg-gray-800 transition-colors duration-300 group/btn"
+                      >
+                        <ExternalLink className="w-4 h-4 group-hover/btn:translate-x-0.5 transition-transform" />
+                        Live Demo
+                      </Link>
+                    )}
                     
-                    <Link
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 border-2 border-gray-300 text-black text-sm font-semibold rounded-lg hover:border-black hover:bg-gray-50 transition-colors duration-300 group/btn"
-                    >
-                      <Github className="w-4 h-4" />
-                      GitHub
-                    </Link>
-                    
-                    <Link
-                      href={project.caseStudy}
-                      className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 border-2 border-gray-300 text-black text-sm font-semibold rounded-lg hover:border-black hover:bg-gray-50 transition-colors duration-300 group/btn"
-                    >
-                      <FileText className="w-4 h-4" />
-                      Case Study
-                    </Link>
+                    {project.github !== '#' && (
+                      <Link
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 border-2 border-gray-300 text-black text-sm font-semibold rounded-lg hover:border-black hover:bg-gray-50 transition-colors duration-300 group/btn"
+                      >
+                        <Github className="w-4 h-4" />
+                        GitHub
+                      </Link>
+                    )}
                   </div>
                 </div>
               </div>

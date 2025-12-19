@@ -6,31 +6,31 @@ import { ExternalLink, Github } from 'lucide-react';
 const projects = [
   {
     id: 1,
-    title: 'E-Commerce Platform',
-    description: 'A full-stack e-commerce solution with real-time inventory management, payment integration, and admin dashboard.',
-    image: 'https://images.unsplash.com/photo-1460925895917-adf4e565db18?w=800&h=500&fit=crop',
-    tags: ['Next.js', 'TypeScript', 'Stripe', 'MongoDB'],
-    link: '#',
-    github: '#',
+    title: 'Loopwork',
+    description: 'A modern, all-in-one collaboration platform designed to streamline daily office operations with 14+ integrated tools.',
+    image: '/loopwork.png',
+    tags: ['Next.js', 'React', 'Node.js', 'Full-Stack'],
+    link: 'https://loopwork-seven.vercel.app/',
+    github: 'https://github.com/Zhatwoo/Project-Management.git',
     featured: true,
   },
   {
     id: 2,
-    title: 'Task Management App',
-    description: 'A collaborative task management application with real-time updates, team collaboration features, and analytics dashboard.',
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=500&fit=crop',
-    tags: ['React', 'Firebase', 'Tailwind CSS', 'Redux'],
-    link: '#',
+    title: 'TJournal',
+    description: 'Advanced trading journal platform that helps traders track performance and transform their strategy through data-driven insights.',
+    image: '/tjournal-hero.png',
+    tags: ['Next.js', 'React', 'Analytics', 'Trading'],
+    link: 'https://tjournal-chi.vercel.app/',
     github: '#',
     featured: true,
   },
   {
     id: 3,
-    title: 'Analytics Dashboard',
-    description: 'Data visualization and analytics platform with interactive charts, real-time metrics, and customizable reports.',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop',
-    tags: ['Next.js', 'Chart.js', 'Node.js', 'PostgreSQL'],
-    link: '#',
+    title: 'POSystem',
+    description: 'Company login and management system with secure company-based authentication and streamlined access control.',
+    image: '/posystem-landing.png',
+    tags: ['Next.js', 'Authentication', 'Security', 'Full-Stack'],
+    link: 'https://posystem-seven.vercel.app/',
     github: '#',
     featured: true,
   },
@@ -68,18 +68,24 @@ export default function FeaturedProjects() {
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100">
                   <Link
                     href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="p-3 bg-white text-black rounded-full hover:bg-gray-200 transition-colors"
                     title="View Project"
                   >
                     <ExternalLink className="w-5 h-5" />
                   </Link>
-                  <Link
-                    href={project.github}
-                    className="p-3 bg-white text-black rounded-full hover:bg-gray-200 transition-colors"
-                    title="View Code"
-                  >
-                    <Github className="w-5 h-5" />
-                  </Link>
+                  {project.github !== '#' && (
+                    <Link
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-3 bg-white text-black rounded-full hover:bg-gray-200 transition-colors"
+                      title="View Code"
+                    >
+                      <Github className="w-5 h-5" />
+                    </Link>
+                  )}
                 </div>
               </div>
 
@@ -111,7 +117,7 @@ export default function FeaturedProjects() {
         {/* View All Projects CTA */}
         <div className="mt-16 text-center">
           <Link
-            href="/projects"
+            href="/Projects"
             className="inline-flex items-center gap-2 px-8 py-4 bg-black text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors duration-300 group"
           >
             View All Projects
