@@ -44,6 +44,16 @@ const projects = [
     github: 'https://github.com/Zhatwoo/Project-Management.git',
     caseStudy: '#',
   },
+  {
+    id: 5,
+    title: 'Smart Budget',
+    description: 'A mobile app for personal finance management. Your personal finance assistant for smarter financial decisions. Track expenses, plan budgets, and make smarter financial decisions with intelligent insights. Features include smart budget planning, expense tracking, inflation tracker, analytics, and bill reminders.',
+    image: '/smartbudget.png',
+    tags: ['Flutter', 'Node.js', 'Next.js', 'Finance', 'Budgeting', 'Analytics'],
+    liveDemo: 'https://smartbudget-pi.vercel.app/',
+    github: '#',
+    caseStudy: '#',
+  },
 ];
 
 export default function Projects() {
