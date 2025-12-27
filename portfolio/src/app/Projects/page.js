@@ -163,7 +163,7 @@ export default function Projects() {
             Let's discuss how we can bring your ideas to life!
           </p>
           <Link
-            href="/Contact"
+            href="/Contacts"
             className="inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-semibold rounded-lg hover:bg-gray-200 transition-colors duration-300 group"
           >
             Get In Touch

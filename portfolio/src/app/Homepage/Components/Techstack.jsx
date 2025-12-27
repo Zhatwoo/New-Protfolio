@@ -15,6 +15,8 @@ import {
   SiAmazon,
   SiArduino,
   SiRaspberrypi,
+  SiFlutter,
+  SiDart,
 } from 'react-icons/si';
 import { FiCpu } from 'react-icons/fi';
 
@@ -52,6 +54,8 @@ const techStack = [
       { name: 'Next.js', icon: SiNextdotjs, color: '#000000' },
       { name: 'Tailwind CSS', icon: SiTailwindcss, color: '#06B6D4' },
       { name: 'JavaScript', icon: SiJavascript, color: '#F7DF1E' },
+      { name: 'Flutter', icon: SiFlutter, color: '#02569B' },
+      { name: 'Dart', icon: SiDart, color: '#0175C2' },
     ],
   },
   {
