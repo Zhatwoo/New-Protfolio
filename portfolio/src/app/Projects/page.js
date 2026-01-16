@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { ExternalLink, Github } from 'lucide-react';
+import { useState } from 'react';
 
 const projects = [
   {
@@ -54,7 +55,105 @@ const projects = [
     github: '#',
     caseStudy: '#',
   },
+  {
+    id: 6,
+    title: 'Inspire Estate',
+    description: 'A comprehensive real estate platform for discovering premium properties in the Philippines. Features include property search, developer listings, exclusive promotions, featured advertisements, and trusted partnerships with the country\'s most reputable real estate developers.',
+    image: '/InspireEstate.jpg',
+    tags: ['Next.js', 'React', 'Real Estate', 'Property Management', 'Full-Stack'],
+    liveDemo: 'https://www.inspire-estate.com/',
+    fallbackDemo: 'https://inspire-real-estate.vercel.app/',
+    github: '#',
+    caseStudy: '#',
+  },
+  {
+    id: 7,
+    title: 'I-Hub',
+    description: 'I-Hub (Inspire Hub) is a coworking space platform operating in Metro Manila. Provides flexible workspace solutions for professionals, freelancers, startups, and remote teams. Features include room search and booking, capacity management, location-based services, and workspace inquiry system.',
+    image: '/i-HUb.png',
+    tags: ['Next.js', 'React', 'Coworking', 'Workspace Management', 'Full-Stack'],
+    liveDemo: '#',
+    github: '#',
+    caseStudy: '#',
+  },
 ];
+
+// Fallback Link Component - tries primary URL first, falls back if it fails
+function FallbackLink({ primaryUrl, fallbackUrl, className, children }) {
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleClick = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    // Try to check if primary URL is accessible using a hidden iframe
+    return new Promise((resolve) => {
+      const iframe = document.createElement('iframe');
+      iframe.style.display = 'none';
+      iframe.style.width = '0';
+      iframe.style.height = '0';
+      iframe.style.position = 'absolute';
+      iframe.style.left = '-9999px';
+      
+      let resolved = false;
+      const timeout = 3000; // 3 second timeout
+      
+      const cleanup = () => {
+        if (!resolved) {
+          resolved = true;
+          if (document.body.contains(iframe)) {
+            document.body.removeChild(iframe);
+          }
+          setIsLoading(false);
+        }
+      };
+      
+      // If iframe loads successfully, open primary URL
+      iframe.onload = () => {
+        if (!resolved) {
+          cleanup();
+          window.open(primaryUrl, '_blank', 'noopener,noreferrer');
+          resolve();
+        }
+      };
+      
+      // If iframe fails to load, use fallback
+      iframe.onerror = () => {
+        if (!resolved) {
+          cleanup();
+          window.open(fallbackUrl, '_blank', 'noopener,noreferrer');
+          resolve();
+        }
+      };
+      
+      // Timeout fallback - if iframe doesn't load in time, use fallback
+      setTimeout(() => {
+        if (!resolved) {
+          cleanup();
+          // Try primary first, but if it seems unreliable, use fallback
+          // For now, we'll try primary and if user sees 404, they know to try again
+          // Or we can default to fallback on timeout
+          window.open(fallbackUrl, '_blank', 'noopener,noreferrer');
+          resolve();
+        }
+      }, timeout);
+      
+      // Set iframe source to test the URL
+      iframe.src = primaryUrl;
+      document.body.appendChild(iframe);
+    });
+  };
+
+  return (
+    <button
+      onClick={handleClick}
+      disabled={isLoading}
+      className={className}
+    >
+      {children}
+    </button>
+  );
+}
 
 export default function Projects() {
   return (
@@ -122,15 +221,26 @@ export default function Projects() {
                   {/* Action Buttons */}
                   <div className="flex flex-wrap gap-3">
                     {project.liveDemo !== '#' && (
-                      <Link
-                        href={project.liveDemo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-black text-white text-sm font-semibold rounded-lg hover:bg-gray-800 transition-colors duration-300 group/btn"
-                      >
-                        <ExternalLink className="w-4 h-4 group-hover/btn:translate-x-0.5 transition-transform" />
-                        Live Demo
-                      </Link>
+                      project.fallbackDemo ? (
+                        <FallbackLink
+                          primaryUrl={project.liveDemo}
+                          fallbackUrl={project.fallbackDemo}
+                          className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-black text-white text-sm font-semibold rounded-lg hover:bg-gray-800 transition-colors duration-300 group/btn disabled:opacity-50"
+                        >
+                          <ExternalLink className="w-4 h-4 group-hover/btn:translate-x-0.5 transition-transform" />
+                          Live Demo
+                        </FallbackLink>
+                      ) : (
+                        <Link
+                          href={project.liveDemo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-black text-white text-sm font-semibold rounded-lg hover:bg-gray-800 transition-colors duration-300 group/btn"
+                        >
+                          <ExternalLink className="w-4 h-4 group-hover/btn:translate-x-0.5 transition-transform" />
+                          Live Demo
+                        </Link>
+                      )
                     )}
                     
                     {project.github !== '#' && (
