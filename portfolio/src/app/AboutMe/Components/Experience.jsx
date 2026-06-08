@@ -5,7 +5,7 @@ export default function Experience() {
     {
       title: 'Software Developer',
       company: 'Inspire Holdings Inc.',
-      period: '2025 - Present',
+      period: '2025-2026',
       description: 'Developing my programming skills and projects Learning new technologies and frameworks.',
     },
 

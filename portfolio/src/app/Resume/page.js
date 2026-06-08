@@ -2,11 +2,14 @@
 
 import { Download, FileText, ExternalLink } from 'lucide-react';
 
+const RESUME_PDF = '/Neo_Dela_Torre_Resume (1).pdf';
+const RESUME_DOWNLOAD_NAME = 'Neo Dela Torre - Software Developer Resume.pdf';
+
 export default function Resume() {
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/Grey Modern Company Resume.pdf';
-    link.download = 'Grey Modern Company Resume.pdf';
+    link.href = RESUME_PDF;
+    link.download = RESUME_DOWNLOAD_NAME;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -38,7 +41,7 @@ export default function Resume() {
                 Download PDF
               </button>
               <a
-                href="/Grey Modern Company Resume.pdf"
+                href={encodeURI(RESUME_PDF)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-gray-300 text-black font-semibold rounded-lg hover:border-black hover:bg-gray-50 transition-all duration-300"
@@ -67,7 +70,7 @@ export default function Resume() {
                 }}
               >
                 <iframe
-                  src="/Grey Modern Company Resume.pdf#toolbar=1&navpanes=1&scrollbar=1"
+                  src={`${encodeURI(RESUME_PDF)}#toolbar=1&navpanes=1&scrollbar=1`}
                   className="w-full h-full border-0"
                   title="Neo Dela Torre Resume PDF"
                   style={{ minHeight: '900px' }}
