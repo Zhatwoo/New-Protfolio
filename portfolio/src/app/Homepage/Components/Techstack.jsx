@@ -1,5 +1,6 @@
 'use client';
 
+import { useTheme } from '../../Components/ThemeProvider';
 import {
   SiReact,
   SiNextdotjs,
@@ -52,7 +53,7 @@ const techStack = [
     category: 'Frontend',
     technologies: [
       { name: 'React', icon: SiReact, color: '#61DAFB' },
-      { name: 'Next.js', icon: SiNextdotjs, color: '#000000' },
+      { name: 'Next.js', icon: SiNextdotjs, color: '#000000', darkColor: '#FFFFFF' },
       { name: 'Tailwind CSS', icon: SiTailwindcss, color: '#06B6D4' },
       { name: 'JavaScript', icon: SiJavascript, color: '#F7DF1E' },
       { name: 'Flutter', icon: SiFlutter, color: '#02569B' },
@@ -63,7 +64,7 @@ const techStack = [
     category: 'Backend',
     technologies: [
       { name: 'Node.js', icon: SiNodedotjs, color: '#339933' },
-      { name: 'Express.js', icon: SiExpress, color: '#000000' },
+      { name: 'Express.js', icon: SiExpress, color: '#000000', darkColor: '#FFFFFF' },
       { name: 'Supabase', icon: SiSupabase, color: '#3ECF8E' },
       { name: 'Firebase', icon: SiFirebase, color: '#FFCA28' },
       { name: 'PostgreSQL', icon: SiPostgresql, color: '#336791' },
@@ -74,7 +75,7 @@ const techStack = [
     technologies: [
       { name: 'Git', icon: SiGit, color: '#F1502F' },
       { name: 'Figma', icon: SiFigma, color: '#F24E1E' },
-      { name: 'Vercel', icon: SiVercel, color: '#000000' },
+      { name: 'Vercel', icon: SiVercel, color: '#000000', darkColor: '#FFFFFF' },
       { name: 'AWS', icon: SiAmazon, color: '#FF9900' },
     ],
   },
@@ -83,20 +84,22 @@ const techStack = [
     technologies: [
       { name: 'Arduino', icon: SiArduino, color: '#00979D' },
       { name: 'ESP32', icon: Esp32Icon, color: '#6CC24A' },
-      { name: 'Circuits', icon: FiCpu, color: '#4B5563' },
+      { name: 'Circuits', icon: FiCpu, color: '#4B5563', darkColor: '#9CA3AF' },
       { name: 'Raspberry Pi', icon: SiRaspberrypi, color: '#C51A4A' },
     ],
   },
 ];
 
 export default function TechStack() {
+  const { theme } = useTheme();
+
   return (
-    <section id="techstack" className="py-20 sm:py-32 bg-white">
+    <section id="techstack" className="py-20 sm:py-32 bg-white dark:bg-black">
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-black mb-4">Technical Skills</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-4xl sm:text-5xl font-bold text-black dark:text-white mb-4">Technical Skills</h2>
+          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             I work with modern technologies to build scalable, efficient, user-friendly applications and tools.
           </p>
         </div>
@@ -106,8 +109,8 @@ export default function TechStack() {
           {techStack.map((stack, index) => (
             <div key={index} className="group">
               {/* Category Title */}
-              <h3 className="text-xl font-bold text-black mb-8 flex items-center">
-                <span className="w-1 h-8 bg-black rounded mr-3"></span>
+              <h3 className="text-xl font-bold text-black dark:text-white mb-8 flex items-center">
+                <span className="w-1 h-8 bg-black dark:bg-white rounded mr-3"></span>
                 {stack.category}
               </h3>
 
@@ -118,10 +121,14 @@ export default function TechStack() {
                   return (
                     <div
                       key={techIndex}
-                      className="flex flex-col items-center justify-center p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer border border-gray-200"
+                      className="flex flex-col items-center justify-center p-6 bg-gray-50 dark:bg-gray-900 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer border border-gray-200 dark:border-gray-800"
                     >
-                      <IconComponent size={40} color={tech.color} className="mb-3" />
-                      <span className="text-sm font-semibold text-gray-800 text-center">{tech.name}</span>
+                      <IconComponent
+                        size={40}
+                        color={theme === 'dark' && tech.darkColor ? tech.darkColor : tech.color}
+                        className="mb-3"
+                      />
+                      <span className="text-sm font-semibold text-gray-800 dark:text-gray-200 text-center">{tech.name}</span>
                     </div>
                   );
                 })}

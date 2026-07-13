@@ -38,14 +38,14 @@ const projects = [
 
 export default function FeaturedProjects() {
   return (
-    <section id="projects" className="py-20 sm:py-32 bg-white">
+    <section id="projects" className="py-20 sm:py-32 bg-white dark:bg-black">
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-black mb-4">
+          <h2 className="text-4xl sm:text-5xl font-bold text-black dark:text-white mb-4">
             Featured Projects
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Showcasing my best work and innovative solutions I've built for clients and personal projects.
           </p>
         </div>
@@ -55,10 +55,10 @@ export default function FeaturedProjects() {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+              className="group bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
             >
               {/* Project Image */}
-              <div className="relative h-56 overflow-hidden bg-gray-100">
+              <div className="relative h-56 overflow-hidden bg-gray-100 dark:bg-gray-900">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -91,10 +91,10 @@ export default function FeaturedProjects() {
 
               {/* Project Content */}
               <div className="p-6">
-                <h3 className="text-xl font-bold text-black mb-2 group-hover:text-gray-800 transition-colors">
+                <h3 className="text-xl font-bold text-black dark:text-white mb-2 group-hover:text-gray-800 dark:group-hover:text-gray-200 transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+                <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-2">
                   {project.description}
                 </p>
 
@@ -103,7 +103,7 @@ export default function FeaturedProjects() {
                   {project.tags.map((tag, index) => (
                     <span
                       key={index}
-                      className="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-semibold rounded-full border border-gray-200 hover:bg-gray-200 transition-colors"
+                      className="px-3 py-1 bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 text-xs font-semibold rounded-full border border-gray-200 dark:border-gray-800 hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"
                     >
                       {tag}
                     </span>
@@ -118,7 +118,7 @@ export default function FeaturedProjects() {
         <div className="mt-16 text-center">
           <Link
             href="/Projects"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-black text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors duration-300 group"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-black dark:bg-white text-white dark:text-black font-semibold rounded-lg hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors duration-300 group"
           >
             View All Projects
             <ExternalLink className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
