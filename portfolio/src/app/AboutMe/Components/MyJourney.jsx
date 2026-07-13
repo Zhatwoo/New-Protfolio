@@ -2,12 +2,12 @@
 
 export default function MyJourney() {
   return (
-    <section className="py-20 sm:py-32 bg-white">
+    <section className="py-20 sm:py-32 bg-white dark:bg-black">
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
-        <h2 className="text-4xl sm:text-5xl font-bold text-black mb-16">My Journey</h2>
-        
+        <h2 className="text-4xl sm:text-5xl font-bold text-black dark:text-white mb-16">My Journey</h2>
+
         <div className="space-y-8">
-          <p className="text-lg text-gray-600 leading-relaxed">
+          <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
           I graduated with a degree in Computer Engineering, and at first, my hardware skills were stronger than my software skills. 
           I was worried about applying for jobs and entering the world of coding because I thought I wouldn’t be able to keep up. 
           But when I got accepted into a small company, I learned new frameworks that became my tools in the programming world.

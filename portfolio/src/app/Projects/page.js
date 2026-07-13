@@ -106,6 +106,16 @@ const projects = [
     github: '#',
     caseStudy: '#',
   },
+  {
+    id: 11,
+    title: 'Centric',
+    description: 'A Figma-like drag-and-drop website and storefront builder that lets teams design, manage, and publish enterprise storefronts without writing backend code. Features a visual block editor with a layers panel, live canvas preview, and reusable sections (header, hero, feature grid, footer) for rapid page assembly.',
+    image: '/centric.png',
+    tags: ['Next.js', 'React', 'TSX', 'Express', 'Node.js', 'Website Builder', 'Full-Stack'],
+    liveDemo: '#',
+    github: '#',
+    caseStudy: '#',
+  },
 ];
 
 // Fallback Link Component - tries primary URL first, falls back if it fails
@@ -187,37 +197,37 @@ function FallbackLink({ primaryUrl, fallbackUrl, className, children }) {
 
 export default function Projects() {
   return (
-    <main className="bg-white">
+    <main className="bg-white dark:bg-black">
       {/* Hero Section */}
-      <section className="min-h-[60vh] bg-gradient-to-b from-white via-gray-50 to-white flex items-center justify-center py-20 sm:py-32">
+      <section className="min-h-[60vh] bg-gradient-to-b from-white via-gray-50 to-white dark:from-black dark:via-gray-950 dark:to-black flex items-center justify-center py-20 sm:py-32">
         <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
-          <div className="inline-block px-4 py-2 bg-gray-100 border border-gray-200 rounded-full mb-6">
-            <span className="text-sm font-semibold text-gray-700">My Work</span>
+          <div className="inline-block px-4 py-2 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-full mb-6">
+            <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">My Work</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-black mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-black dark:text-white mb-6 leading-tight">
             Projects & Portfolio
           </h1>
 
-          <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Explore my collection of projects showcasing my expertise in full-stack development, 
-            modern web technologies, and innovative solutions. Each project demonstrates different 
+          <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Explore my collection of projects showcasing my expertise in full-stack development,
+            modern web technologies, and innovative solutions. Each project demonstrates different
             aspects of my skills and problem-solving approach.
           </p>
         </div>
       </section>
 
       {/* Projects Grid */}
-      <section className="py-12 sm:py-20 bg-white">
+      <section className="py-12 sm:py-20 bg-white dark:bg-black">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project) => (
               <div
                 key={project.id}
-                className="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+                className="group bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
               >
                 {/* Project Thumbnail */}
-                <div className="relative h-56 overflow-hidden bg-gray-100">
+                <div className="relative h-56 overflow-hidden bg-gray-100 dark:bg-gray-900">
                   <img
                     src={project.image}
                     alt={project.title}
@@ -228,11 +238,11 @@ export default function Projects() {
 
                 {/* Project Content */}
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-black mb-3 group-hover:text-gray-800 transition-colors">
+                  <h3 className="text-xl font-bold text-black dark:text-white mb-3 group-hover:text-gray-800 dark:group-hover:text-gray-200 transition-colors">
                     {project.title}
                   </h3>
-                  
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-3 leading-relaxed">
+
+                  <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-3 leading-relaxed">
                     {project.description}
                   </p>
 
@@ -241,7 +251,7 @@ export default function Projects() {
                     {project.tags.map((tag, index) => (
                       <span
                         key={index}
-                        className="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-semibold rounded-full border border-gray-200"
+                        className="px-3 py-1 bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 text-xs font-semibold rounded-full border border-gray-200 dark:border-gray-800"
                       >
                         {tag}
                       </span>
@@ -255,7 +265,7 @@ export default function Projects() {
                         <FallbackLink
                           primaryUrl={project.liveDemo}
                           fallbackUrl={project.fallbackDemo}
-                          className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-black text-white text-sm font-semibold rounded-lg hover:bg-gray-800 transition-colors duration-300 group/btn disabled:opacity-50"
+                          className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-black dark:bg-white text-white dark:text-black text-sm font-semibold rounded-lg hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors duration-300 group/btn disabled:opacity-50"
                         >
                           <ExternalLink className="w-4 h-4 group-hover/btn:translate-x-0.5 transition-transform" />
                           Live Demo
@@ -265,20 +275,20 @@ export default function Projects() {
                           href={project.liveDemo}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-black text-white text-sm font-semibold rounded-lg hover:bg-gray-800 transition-colors duration-300 group/btn"
+                          className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-black dark:bg-white text-white dark:text-black text-sm font-semibold rounded-lg hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors duration-300 group/btn"
                         >
                           <ExternalLink className="w-4 h-4 group-hover/btn:translate-x-0.5 transition-transform" />
                           Live Demo
                         </Link>
                       )
                     )}
-                    
+
                     {project.github !== '#' && (
                       <Link
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 border-2 border-gray-300 text-black text-sm font-semibold rounded-lg hover:border-black hover:bg-gray-50 transition-colors duration-300 group/btn"
+                        className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 border-2 border-gray-300 dark:border-gray-700 text-black dark:text-white text-sm font-semibold rounded-lg hover:border-black dark:hover:border-white hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors duration-300 group/btn"
                       >
                         <Github className="w-4 h-4" />
                         GitHub
@@ -293,13 +303,13 @@ export default function Projects() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 sm:py-32 bg-black text-white">
+      <section className="py-20 sm:py-32 bg-black dark:bg-gray-950 text-white border-t border-transparent dark:border-gray-800">
         <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
           <h2 className="text-4xl sm:text-5xl font-bold mb-6">
             Have a Project in Mind?
           </h2>
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            I'm always interested in working on exciting new projects. 
+            I'm always interested in working on exciting new projects.
             Let's discuss how we can bring your ideas to life!
           </p>
           <Link

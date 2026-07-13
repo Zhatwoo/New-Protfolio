@@ -27,26 +27,26 @@ export default function Education() {
   ];
 
   return (
-    <section className="py-20 sm:py-32 bg-white">
+    <section className="py-20 sm:py-32 bg-white dark:bg-black">
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
-        <h2 className="text-4xl sm:text-5xl font-bold text-black mb-16">Education</h2>
+        <h2 className="text-4xl sm:text-5xl font-bold text-black dark:text-white mb-16">Education</h2>
 
         <div className="space-y-8">
           {education.map((edu, index) => (
             <div
               key={index}
-              className="bg-gray-50 p-8 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow"
+              className="bg-gray-50 dark:bg-gray-900 p-8 rounded-xl border border-gray-200 dark:border-gray-800 hover:shadow-lg transition-shadow"
             >
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4">
                 <div>
-                  <h3 className="text-2xl font-bold text-black">{edu.degree}</h3>
-                  <p className="text-lg text-gray-600 mt-1">{edu.institution}</p>
+                  <h3 className="text-2xl font-bold text-black dark:text-white">{edu.degree}</h3>
+                  <p className="text-lg text-gray-600 dark:text-gray-400 mt-1">{edu.institution}</p>
                 </div>
-                <span className="text-sm font-semibold text-gray-500 mt-2 sm:mt-0">
+                <span className="text-sm font-semibold text-gray-500 dark:text-gray-400 mt-2 sm:mt-0">
                   {edu.period}
                 </span>
               </div>
-              <p className="text-gray-600">{edu.description}</p>
+              <p className="text-gray-600 dark:text-gray-400">{edu.description}</p>
             </div>
           ))}
         </div>
