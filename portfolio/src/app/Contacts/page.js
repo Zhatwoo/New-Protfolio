@@ -195,10 +195,10 @@ export default function Contact() {
                   <div>
                     <h3 className="text-lg font-semibold text-black dark:text-white mb-1">Email</h3>
                     <a
-                      href="mailto:your.email@example.com"
+                      href="mailto:ndelatorre0525@gmail.com"
                       className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors"
                     >
-                      Ndelatorre08252002@gmail.com
+                      ndelatorre0525@gmail.com
                     </a>
                   </div>
                 </div>
@@ -210,10 +210,10 @@ export default function Contact() {
                   <div>
                     <h3 className="text-lg font-semibold text-black dark:text-white mb-1">Phone</h3>
                     <a
-                      href="tel:+1234567890"
+                      href="tel:+639916957681"
                       className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors"
                     >
-                     +639457738411
+                      09916957681 / 09457738411
                     </a>
                   </div>
                 </div>
@@ -225,7 +225,8 @@ export default function Contact() {
                   <div>
                     <h3 className="text-lg font-semibold text-black dark:text-white mb-1">Location</h3>
                     <p className="text-gray-600 dark:text-gray-400">
-                        Phillipines <br />
+                      Turo, Bocaue, Bulacan
+                      <br />
                       Available for remote work worldwide
                     </p>
                   </div>

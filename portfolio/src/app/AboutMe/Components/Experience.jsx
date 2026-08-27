@@ -5,10 +5,68 @@ export default function Experience() {
     {
       title: 'Software Developer',
       company: 'Inspire Holdings Inc.',
-      period: '2025-2026',
-      description: 'Developing my programming skills and projects Learning new technologies and frameworks.',
+      period: 'July 2025 – July 2026',
+      description:
+        'Developed and maintained client-facing web applications with a focus on clean UI, full-stack delivery, and reliable deployments.',
+      highlights: [
+        'Built and maintained client-facing web applications using React and Next.js.',
+        'Created responsive UI components with Tailwind CSS and managed deployments via Vercel.',
+        'Collaborated with cross-functional teams on full-stack feature delivery using Git.',
+      ],
     },
-
+    {
+      title: 'Intern, Robotics Department',
+      company: "Dr. Yanga's Colleges Inc.",
+      period: 'April – May 2025',
+      description:
+        'Supported robotics projects through embedded systems development, hardware integration, and programmed control logic.',
+      highlights: [
+        'Built embedded systems projects using Arduino, ESP32, and Raspberry Pi.',
+        'Integrated sensors and hardware components with programmed control logic.',
+      ],
+    },
+    {
+      title: 'Intern, IT Support',
+      company: 'Shaglani Trading Corp.',
+      period: 'February – April 2025',
+      description:
+        'Provided technical support for office systems and assisted with documentation and basic network maintenance.',
+      highlights: [
+        'Handled technical support and system troubleshooting for office operations.',
+        'Assisted with AutoCAD documentation and basic network maintenance tasks.',
+      ],
+    },
+    {
+      title: 'Self-Employed, Client-Based',
+      company: 'Financial Market Fund Management',
+      period: 'Ongoing',
+      description:
+        'Managed forex trading funds for clients using structured, risk-controlled strategies and technical market analysis.',
+      highlights: [
+        'Managed forex trading funds with structured, risk-controlled strategies for clients.',
+        'Applied market and technical analysis for consistent fund performance.',
+      ],
+    },
+    {
+      title: 'Self-Employed',
+      company: 'Computer Service',
+      period: '2024',
+      description:
+        'Provided PC repair, setup, and maintenance services to local individual clients.',
+      highlights: [
+        'Delivered PC repair, setup, and maintenance services for individual clients.',
+      ],
+    },
+    {
+      title: 'Sales Assistant',
+      company: 'Puregold',
+      period: 'April – May 2022',
+      description:
+        'Assisted customers and supported daily retail floor operations.',
+      highlights: [
+        'Assisted customers and supported daily retail floor operations.',
+      ],
+    },
   ];
 
   return (
@@ -31,7 +89,20 @@ export default function Experience() {
                   {job.period}
                 </span>
               </div>
-              <p className="text-gray-600 dark:text-gray-400">{job.description}</p>
+              <p className="text-gray-600 dark:text-gray-400 mb-4">{job.description}</p>
+              {job.highlights?.length > 0 && (
+                <ul className="space-y-2">
+                  {job.highlights.map((item) => (
+                    <li
+                      key={item}
+                      className="flex gap-3 text-sm text-gray-600 dark:text-gray-400 leading-relaxed"
+                    >
+                      <span className="mt-2 w-1.5 h-1.5 rounded-full bg-black dark:bg-white flex-shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           ))}
         </div>
@@ -39,4 +110,3 @@ export default function Experience() {
     </section>
   );
 }
-

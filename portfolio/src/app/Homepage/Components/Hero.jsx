@@ -32,8 +32,8 @@ export default function Hero() {
 
         {/* Subheading */}
         <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 text-center max-w-2xl mx-auto mb-8 leading-relaxed">
-        I'm a Computer Engineer Graduate with 1 year of experience building useful and functional digital and hardware projects.
-        Creating solutions that make a difference and working with teams that share the same passion for excellence.
+          Software Developer and Computer Engineer specializing in React, Next.js, and full-stack delivery —
+          with experience in Flutter, Firebase, Supabase, and hardware prototyping using Arduino and Raspberry Pi.
         </p>
 
         {/* CTA Buttons */}

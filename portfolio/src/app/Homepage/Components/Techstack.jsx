@@ -15,6 +15,7 @@ import {
   SiFigma,
   SiVercel,
   SiAmazon,
+  SiAutodesk,
   SiArduino,
   SiRaspberrypi,
   SiFlutter,
@@ -77,6 +78,7 @@ const techStack = [
       { name: 'Figma', icon: SiFigma, color: '#F24E1E' },
       { name: 'Vercel', icon: SiVercel, color: '#000000', darkColor: '#FFFFFF' },
       { name: 'AWS', icon: SiAmazon, color: '#FF9900' },
+      { name: 'AutoCAD', icon: SiAutodesk, color: '#0696D7' },
     ],
   },
   {
@@ -86,12 +88,13 @@ const techStack = [
       { name: 'ESP32', icon: Esp32Icon, color: '#6CC24A' },
       { name: 'Circuits', icon: FiCpu, color: '#4B5563', darkColor: '#9CA3AF' },
       { name: 'Raspberry Pi', icon: SiRaspberrypi, color: '#C51A4A' },
+      { name: 'Sensors', icon: FiCpu, color: '#2563EB' },
     ],
   },
 ];
 
 export default function TechStack() {
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
 
   return (
     <section id="techstack" className="py-20 sm:py-32 bg-white dark:bg-black">
@@ -125,7 +128,7 @@ export default function TechStack() {
                     >
                       <IconComponent
                         size={40}
-                        color={theme === 'dark' && tech.darkColor ? tech.darkColor : tech.color}
+                        color={resolvedTheme === 'dark' && tech.darkColor ? tech.darkColor : tech.color}
                         className="mb-3"
                       />
                       <span className="text-sm font-semibold text-gray-800 dark:text-gray-200 text-center">{tech.name}</span>

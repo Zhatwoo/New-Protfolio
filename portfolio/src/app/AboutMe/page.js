@@ -54,6 +54,8 @@ export default function AboutMe() {
     'Project Management',
     'Attention to Detail',
     'Adaptability',
+    'Technical Support',
+    'Customer Service',
   ];
 
   return (
@@ -75,8 +77,11 @@ export default function AboutMe() {
               </h1>
 
               <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
-                I'm a Computer Engineer Graduate with 1 year of experience building useful and functional digital and hardware projects.
-               Creating solutions that make a difference and working with teams that share the same passion for excellence.
+                Results-driven Computer Engineering graduate specializing in software and front-end development.
+                Proficient in JavaScript, React, Next.js, and Tailwind CSS, with backend experience in Node.js,
+                Firebase, Supabase, and PostgreSQL. Experienced in cross-platform mobile development using Flutter
+                and hardware prototyping with Arduino and Raspberry Pi — focused on clean UI/UX, maintainable code,
+                and efficient full-stack solutions.
               </p>
 
               <Link
