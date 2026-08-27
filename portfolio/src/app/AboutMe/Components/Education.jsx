@@ -4,26 +4,27 @@ export default function Education() {
   const education = [
     {
       degree: 'Bachelor of Science in Computer Engineering',
-      institution: "Dr.Yanga College's Inc. ",
-      period: '2024 - 2025',
-      description: 'Fused Cuircuits, Electronics, Software Engineering and Hardware Systems.',
+      institution: "Dr. Yanga's Colleges Inc.",
+      period: '2024 – 2025',
+      description:
+        'Focused on circuits, electronics, software engineering, and hardware systems — bridging embedded technology with modern software development.',
     },
     {
-      degree: 'Senior Higschool Graduate',
-      institution: 'Sta.Maria National HighSchool',
-      period: '2019-2020',
-      description: 'Taking General Academic Strand.',
+      degree: 'Senior High School Graduate',
+      institution: 'Sta. Maria National High School',
+      period: '2019 – 2020',
+      description: 'General Academic Strand (GAS).',
     },
     {
       degree: 'Junior High School Graduate',
       institution: 'Lolomboy National High School',
-      period: '2017-2018',
+      period: '2017 – 2018',
     },
     {
-        degree: 'Elementary Graduate',
-        institution: 'Biñang 1st Elementary School',
-        period: '2013-2014',
-      },
+      degree: 'Elementary Graduate',
+      institution: 'Biñang 1st Elementary School',
+      period: '2013 – 2014',
+    },
   ];
 
   return (
@@ -46,7 +47,9 @@ export default function Education() {
                   {edu.period}
                 </span>
               </div>
-              <p className="text-gray-600 dark:text-gray-400">{edu.description}</p>
+              {edu.description && (
+                <p className="text-gray-600 dark:text-gray-400">{edu.description}</p>
+              )}
             </div>
           ))}
         </div>
@@ -54,4 +57,3 @@ export default function Education() {
     </section>
   );
 }
-

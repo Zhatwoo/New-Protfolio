@@ -8,15 +8,19 @@ export default function MyJourney() {
 
         <div className="space-y-8">
           <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-          I graduated with a degree in Computer Engineering, and at first, my hardware skills were stronger than my software skills. 
-          I was worried about applying for jobs and entering the world of coding because I thought I wouldn’t be able to keep up. 
-          But when I got accepted into a small company, I learned new frameworks that became my tools in the programming world.
-          My background as a Computer Engineer with knowledge in both hardware and software also became an advantage. 
-          It opened more opportunities for me and increased my value as both a Computer Engineer and a Software Developer.
+            I graduated with a Bachelor of Science in Computer Engineering from Dr. Yanga&apos;s Colleges Inc.
+            Early on, my strengths leaned toward hardware — circuits, embedded systems, and hands-on builds.
+            Through software development roles and internships, I expanded into modern web and mobile stacks,
+            learning frameworks that became my core tools for building production-ready applications.
+          </p>
+          <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+            Today I work across the full stack — React, Next.js, Node.js, Firebase, Supabase, and Flutter —
+            while still applying my hardware background with Arduino, ESP32, and Raspberry Pi.
+            That combination of software and engineering continues to shape how I design clean interfaces,
+            maintainable systems, and practical solutions for real users.
           </p>
         </div>
       </div>
     </section>
   );
 }
-

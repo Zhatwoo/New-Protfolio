@@ -12,6 +12,7 @@ export default function Header() {
     { name: 'Home', href: '/' },
     { name: 'About Me', href: '/AboutMe' },
     { name: 'Projects', href: '/Projects' },
+    { name: 'OJT Journey', href: '/OJT' },
     { name: 'Contact', href: '/Contacts' },
     { name: 'Resume', href: '/Resume' },
   ];

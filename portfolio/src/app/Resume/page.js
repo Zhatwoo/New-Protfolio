@@ -2,7 +2,7 @@
 
 import { Download, FileText, ExternalLink } from 'lucide-react';
 
-const RESUME_PDF = '/Neo_Dela_Torre_Resume (1).pdf';
+const RESUME_PDF = '/Neo_Dela_Torre_Resume.pdf';
 const RESUME_DOWNLOAD_NAME = 'Neo Dela Torre - Software Developer Resume.pdf';
 
 export default function Resume() {
