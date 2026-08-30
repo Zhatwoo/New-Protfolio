@@ -116,6 +116,16 @@ const projects = [
     github: '#',
     caseStudy: '#',
   },
+  {
+    id: 12,
+    title: 'QMA',
+    description: 'A full-stack Quality Management Application (QMA) for managing quality workflows, user access, and operational processes. Built with a Next.js frontend and a NestJS backend for scalable API services, secure authentication, and maintainable business logic.',
+    image: '/qma.png',
+    tags: ['Next.js', 'React', 'NestJS', 'Full-Stack', 'Quality Management'],
+    liveDemo: 'https://qma-frontend-neon.vercel.app/',
+    github: '#',
+    caseStudy: '#',
+  },
 ];
 
 // Fallback Link Component - tries primary URL first, falls back if it fails
