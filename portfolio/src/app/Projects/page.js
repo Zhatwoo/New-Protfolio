@@ -126,6 +126,16 @@ const projects = [
     github: '#',
     caseStudy: '#',
   },
+  {
+    id: 13,
+    title: 'QuickPawn',
+    description: 'A full-stack SaaS pawnshop management system. QuickPawn is an all-in-one platform for managing customers, pawn transactions, inventory, loans, payments, and daily operations in one organized system.',
+    image: '/quickpawn.jpg',
+    tags: ['Next.js', 'React', 'SaaS', 'Pawnshop', 'Full-Stack'],
+    liveDemo: 'https://pms-saas-frontend.vercel.app/',
+    github: '#',
+    caseStudy: '#',
+  },
 ];
 
 // Fallback Link Component - tries primary URL first, falls back if it fails

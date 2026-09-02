@@ -56,7 +56,7 @@ export default function Hero() {
         {/* Stats section */}
         <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto pt-12 border-t border-gray-200 dark:border-gray-800">
           <div className="text-center">
-            <div className="text-3xl sm:text-4xl font-bold text-black dark:text-white mb-2">11</div>
+            <div className="text-3xl sm:text-4xl font-bold text-black dark:text-white mb-2">13</div>
             <p className="text-sm text-gray-600 dark:text-gray-400">Projects Completed</p>
           </div>
           <div className="text-center">
